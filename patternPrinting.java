@@ -23,7 +23,7 @@ public class patternPrinting {
             case 2:
                 System.out.println("Enter the number of rows for the diamond:");
                 rows = scanner.nextInt();
-                // printDiamond(rows);
+                printDiamondPattern(rows);
                 break;
             case 3:
                 System.out.println("Enter the number of rows for the number pattern:");
@@ -50,6 +50,34 @@ public class patternPrinting {
             for (int k = 1; k <= 2 * i - 1; k++) {
                 System.out.print("*");
             }
+            System.out.println();
+        }
+    }
+
+    public static void printDiamondPattern(int rows) {
+        // Upper half of the diamond
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print(" ");
+            }
+
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+        // Lower half of the diamond
+        for (int i = rows - 1; i >= 1; i--) {
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print(" ");
+            }
+
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+
             System.out.println();
         }
     }
