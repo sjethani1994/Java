@@ -38,7 +38,7 @@ public class arrayExample {
         // System.out.println(arr2[0]);
 
         // Converting String into an array
-        // char[] name =  ;
+        // char[] name = ;
         // System.out.println();
-        }
+    }
 }
