@@ -28,5 +28,19 @@ public class streamApiEx {
                 .peek(n -> System.out.println("After doubling: " + n))
                 .collect(Collectors.toList());
 
+        // 3. Limit Method
+        List<Integer> numbers2 = Arrays.asList(1, 2, 3, 4, 5);
+
+        List<Integer> limitedNumbers = numbers2.stream()
+                .limit(3)
+                .collect(Collectors.toList());
+
+        System.out.println(limitedNumbers);
+
+        // 4. anyMatch() Method
+        Stream<String> stream = Stream.of("Math", "Science", "English");
+        boolean result = stream.anyMatch(s -> s.contains("M"));
+        System.out.println("match ex: " + result);
+
     }
 }
