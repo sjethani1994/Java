@@ -11,21 +11,20 @@ public class stramApi {
 
         List<Integer> list1 = numbers.stream().filter(i -> i % 2 == 0).collect(Collectors.toList());
 
+        System.out.println("list1 " + list1);
         // getting sum of values in list using mapToInt and sum method
         int sum = numbers.stream().filter(i -> i % 2 == 0).mapToInt(Integer::intValue).sum();
 
         System.out.println("sum " + sum);
 
-        // getting sum of values in list using mapToInt and sum method
+        // using filter and map operators in same operation
         List<Integer> list4 = numbers.stream().filter(i -> i % 2 == 0).map(k -> k + 1).collect(Collectors.toList());
 
         System.out.println("list4 " + list4);
 
-        System.out.println("list1 " + list1);
-
         numbers.stream().filter(i -> i % 2 == 0).forEach(j -> System.out.println(j));
 
-        // String List Example with stream
+        // String List Example with stream :- sorted Method
         List<String> list2 = Arrays.asList("Sumit", "Gopal", "Vilas", "Gulab", "Krishna", "Rakesh");
 
         List<String> strList = list2.stream().sorted().collect(Collectors.toList());
@@ -42,6 +41,13 @@ public class stramApi {
         List<EmployeeData> filteredEmployees = empDataList.stream().filter(i -> i.salary <= 3400)
                 .collect(Collectors.toList());
         System.out.println("Employee List" + filteredEmployees);
+
+        // Distinct Method
+        List<Integer> numbers1 = Arrays.asList(1, 2, 2, 3, 3, 4, 5, 5);
+        List<Integer> distinctNumbers = numbers1.stream()
+                .distinct()
+                .collect(Collectors.toList());
+        System.out.println(distinctNumbers); // Output: [1, 2, 3, 4, 5]
 
     }
 }
