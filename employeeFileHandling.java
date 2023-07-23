@@ -60,7 +60,7 @@ public class employeeFileHandling {
 
     public static void main(String[] args) {
         writeDataToCsv();
-        // readDataFromCsv();
+        readDataFromCsv();
         getEmployeeNameWithSalaryGreaterThanFiftyThousand();
     }
 }
